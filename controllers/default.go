@@ -9,7 +9,7 @@ type MainController struct {
 }
 type Human struct{
 	name string
-	age init
+	age int
 	phone string
 }
 func (h Human) String() string{

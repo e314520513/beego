@@ -2,6 +2,8 @@ package controllers
 
 import (
 	beego "github.com/beego/beego/v2/server/web"
+	"fmt"
+	"strconv"
 )
 
 type MainController struct {
@@ -13,7 +15,7 @@ type Human struct{
 	phone string
 }
 func (h Human) String() string{
-	return h.name+h.age+h.phone
+	return h.name+strconv.Itoa(h.age)+h.phone
 }
 func (c *MainController) Get() {
 	Bob := Human{"Anson",40,"09xx-xxx-xxx"}
